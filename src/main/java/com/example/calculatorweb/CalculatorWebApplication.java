@@ -21,10 +21,10 @@ public class CalculatorWebApplication {
 
     public String hello(@RequestParam Map<String,String> requestParams) {
 
-        int num1= Integer.valueOf(requestParams.get("num1"));
-        int num2 =  Integer.valueOf(requestParams.get("num2"));
+        int num1=Integer.parseInt(requestParams.get("num1"));
+        int num2 = Integer.parseInt(requestParams.get("num2"));
         int sum  = num1+num2;
-        return "The sum of "+num1+ " and "+num2 + " is " +String.valueOf(sum);
+        return "The sum of "+num1+ " and "+num2 + " is " +sum;
     }
 
 
