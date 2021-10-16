@@ -1,5 +1,19 @@
 # calculator-web
 
+
+## ROUTES
+
+GET: `localhost:8080/calculator/add/?num1=60&num2=20`
+
+POST:`localhost:8080/calculator/subtract/?num1=60&num2=20`
+
+GET:`localhost:8080/calculator/multiply/?num1=60&num2=20`
+
+GET:`localhost:8080/calculator/divide/?num1=60&num2=30`
+
+GET:`localhost:8080/calculator/sqrt/?num=25`
+
+
 Base url is /calculator
 
 ## ADD operation
