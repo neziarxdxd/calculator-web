@@ -17,18 +17,7 @@ public class CalculatorWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(CalculatorWebApplication.class, args);
     }
-
-    @RequestMapping("/hello/")
-    public String home(HttpServletRequest request) {
-        String baseUrl = ServletUriComponentsBuilder.fromRequestUri(request)
-                .replacePath(null)
-                .build()
-                .toUriString();
-
-        System.out.println(baseUrl);
-
-        return "home";
-    }
+    // TODO: Create base url
     @GetMapping(value = "/add", produces = MediaType.TEXT_PLAIN_VALUE)
     public String addition(@RequestParam Map<String,String> requestParams) {
 
