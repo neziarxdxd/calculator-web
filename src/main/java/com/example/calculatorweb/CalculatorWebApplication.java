@@ -19,6 +19,7 @@ public class CalculatorWebApplication {
         SpringApplication.run(CalculatorWebApplication.class, args);
     }
 
+    // Add Route
     @GetMapping(value = "/add", produces = MediaType.TEXT_PLAIN_VALUE)
     public String addition(@RequestParam Map<String,String> requestParams) {
 
@@ -28,6 +29,7 @@ public class CalculatorWebApplication {
         return "The sum of "+num1+ " and "+num2 + " is " +sum;
     }
 
+    // Subtract Route
     @PostMapping(value = "/subtract", produces = MediaType.TEXT_PLAIN_VALUE)
     public String subtraction(@RequestParam Map<String,String> requestParams) {
 
@@ -37,6 +39,7 @@ public class CalculatorWebApplication {
         return "The difference of "+num1+ " and "+num2 + " is " +difference;
     }
 
+    // Multiply Route
     @GetMapping(value = "/multiply", produces = MediaType.TEXT_PLAIN_VALUE)
     public String multiply(@RequestParam Map<String,String> requestParams) {
 
@@ -45,6 +48,8 @@ public class CalculatorWebApplication {
         double product  = num1 * num2;
         return "The product of "+num1+ " and "+num2 + " is " +product;
     }
+
+    // Divide Route
     @GetMapping(value = "/divide", produces = MediaType.TEXT_PLAIN_VALUE)
     public String divide(@RequestParam Map<String,String> requestParams) {
 
@@ -59,6 +64,8 @@ public class CalculatorWebApplication {
             return "Math error";
         }
     }
+
+    // Square-root Route
     @GetMapping(value = "/sqrt", produces = MediaType.TEXT_PLAIN_VALUE)
     public String sqrt(@RequestParam Map<String,String> requestParams) {
 
@@ -67,6 +74,8 @@ public class CalculatorWebApplication {
         double root  = Math.sqrt(num);
         return "The square root of " +num+" is "+root;
     }
+
+    // see the README.md for more info
 
 
 
