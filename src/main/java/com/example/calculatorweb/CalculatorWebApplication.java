@@ -12,7 +12,7 @@ import java.util.Map;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/calculator/")
 public class CalculatorWebApplication {
 
     public static void main(String[] args) {
@@ -59,7 +59,7 @@ public class CalculatorWebApplication {
             return "Math error";
         }
     }
-    @GetMapping(value = "/divide", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value = "/sqrt", produces = MediaType.TEXT_PLAIN_VALUE)
     public String sqrt(@RequestParam Map<String,String> requestParams) {
 
         int num=Integer.parseInt(requestParams.get("num"));
